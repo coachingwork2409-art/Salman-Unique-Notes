@@ -3,13 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Salman Unique Notes</title>
-</head>
-<body>
-<h2>Welcome to Salman Unique Notes</h2>
-<p>This is the homepage. Website successfully connected!</p>
+<title>📘 Salman Unique Notes</title>
 
-<a href="ebook.html">Free & Paid Notes (Ebook Page)</a>
+<style>
+    body {
+        margin: 0;
+        background: #eef3f8;
+        font-family: Arial, sans-serif;
+    }
+
+    .header {
+        background: #0d6efd;
+        color: white;
+        padding: 16px;
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+        color: #0d6efd;
+        margin-top: 0;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        text-align: center;
+        text-decoration: none;
+        background: #0d6efd;
+        color: white;
+        font-size: 17px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">📘 Salman Unique Notes</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>📚 सभी कक्षा के Notes</h2>
+        <a class="btn" href="classes/class10.html">Class 10 Notes</a>
+        <a class="btn" href="classes/class9.html">Class 9 Notes</a>
+        <a class="btn" href="classes/class8.html">Class 8 Notes</a>
+        <a class="btn" href="classes/class7.html">Class 7 Notes</a>
+    </div>
+
+    <div class="card">
+        <h2>📘 Free & Paid Notes (Ebook Section)</h2>
+        <a class="btn" href="ebook.html">Free & Paid PDF Download</a>
+    </div>
+
+    <div class="card">
+        <h2>📂 Direct PDF Download</h2>
+        <a class="btn" href="pdf/free.pdf" download>Free PDF Download</a>
+        <a class="btn" href="pdf/paid.pdf" download>Premium PDF Download</a>
+    </div>
+
+</div>
 
 </body>
 </html>
