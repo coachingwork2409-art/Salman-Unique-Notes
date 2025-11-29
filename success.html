@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Payment Success - Salman Unique Notes</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body{font-family:Arial, sans-serif;background:#f5f7fb;padding:20px}
+    .card{max-width:720px;margin:40px auto;background:#fff;padding:24px;border-radius:12px;box-shadow:0 6px 30px rgba(13,110,253,0.08)}
+    h1{color:#0d6efd;text-align:center}
+    p{line-height:1.5}
+    .btn{display:inline-block;padding:12px 18px;border-radius:8px;text-decoration:none;color:#fff;background:#0d6efd;margin-top:12px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>भुगतान सफल 🎉</h1>
+    <p>धन्यवाद! आपका भुगतान सफल हो गया है। नीचे दिए गए बटन पर क्लिक करके आप Premium PDF डाउनलोड कर सकते हैं।</p>
+
+    <!-- Paid download: points to server download -->
+    <a class="btn" href="server/download.php?file=paid">Premium PDF डाउनलोड करें</a>
+
+    <hr style="margin:20px 0">
+    <p><b>नोट:</b> यह वर्कफ्लो तभी सही तरह से चलेगा जब आपकी <code>server/</code> PHP फाइलें किसी PHP-capable host (जैसे 000webhost, Hostinger आदि) पर deploy हों।</p>
+  </div>
+</body>
+</html>
