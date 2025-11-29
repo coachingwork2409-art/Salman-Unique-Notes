@@ -14,36 +14,65 @@
         font-family: 'Segoe UI', Arial, sans-serif;
     }
 
-    /* HEADER */
-    .header {
+    /* TOP NAVBAR */
+    .navbar {
         background: #0d6efd;
-        padding: 20px 10px;
-        text-align: center;
-        color: white;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     }
 
-    .header img {
-        width: 65px;
-        height: 65px;
+    .navbar img {
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
-        border: 3px solid white;
+        border: 2px solid white;
     }
 
-    .header h1 {
-        margin-top: 10px;
-        font-size: 24px;
-        font-weight: bold;
+    .menu-icon {
+        font-size: 32px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
     }
 
-    /* MAIN CONTAINER */
+    /* SIDE MENU */
+    .side-menu {
+        width: 0;
+        height: 100%;
+        background: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: 0.3s;
+        box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+        padding-top: 60px;
+    }
+
+    .side-menu a {
+        display: block;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: #222;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .side-menu a:hover {
+        background: #0d6efd;
+        color: white;
+    }
+
+    /* PAGE CONTENT */
     .container {
         max-width: 900px;
         margin: auto;
         padding: 18px;
     }
 
-    /* CARD */
     .card {
         background: white;
         padding: 20px;
@@ -70,20 +99,38 @@
         font-size: 16px;
         border-radius: 8px;
     }
-
 </style>
+
+<script>
+function openMenu() {
+    document.getElementById('menu').style.width = "250px";
+}
+function closeMenu() {
+    document.getElementById('menu').style.width = "0";
+}
+</script>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-    <!-- YOUR LOGO HERE -->
+<!-- NAVBAR -->
+<div class="navbar">
     <img src="assets/img/logo.png" alt="Logo">
-    <h1>📘 Salman Unique Notes</h1>
+    <span class="menu-icon" onclick="openMenu()">☰</span>
 </div>
 
-<!-- CONTENT -->
+<!-- SIDE MENU -->
+<div id="menu" class="side-menu">
+    <a href="javascript:void(0)" onclick="closeMenu()" style="font-size:22px; text-align:right;">✕</a>
+    <a href="index.html">🏠 Home</a>
+    <a href="classes/class10.html">📘 Class 10</a>
+    <a href="classes/class9.html">📗 Class 9</a>
+    <a href="ebook.html">📕 Free & Premium PDF</a>
+    <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- PAGE CONTENT -->
 <div class="container">
 
     <div class="card">
@@ -97,12 +144,6 @@
     <div class="card">
         <h2>📘 Free & Premium Notes (PDF)</h2>
         <a class="btn" href="ebook.html">Free & Paid PDF Section</a>
-    </div>
-
-    <div class="card">
-        <h2>📂 Direct PDF Download</h2>
-        <a class="btn" href="pdf/free.pdf" download>Free PDF Download</a>
-        <a class="btn" href="pdf/paid.pdf" download>Premium PDF Download</a>
     </div>
 
 </div>
